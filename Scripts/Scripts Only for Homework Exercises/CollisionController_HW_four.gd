@@ -10,3 +10,19 @@ func _disable_collision():
 
 func _enable_collision():
 	$CollisionShape2D.set_deferred("disabled", false)
+
+
+func _on_area_2d_body_entered(body: Node2D):
+	_enable_collision() # Replace with function body.
+
+
+func _on_area_2d_body_exited(body: Node2D):
+	_disable_collision() # Replace with function body.
+
+
+func _on_open_door_button_pressed() -> void:
+	_enable_collision() # Replace with function body.
+
+
+func _on_close_door_button_pressed() -> void:
+	_disable_collision() # Replace with function body.
