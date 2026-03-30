@@ -19,7 +19,3 @@ func _process(delta):
 	if (is_rotating):
 		transform = transform.rotated_local(rotation_speed)
 	pass
-
-
-
-

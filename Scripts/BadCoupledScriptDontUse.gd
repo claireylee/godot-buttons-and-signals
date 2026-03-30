@@ -18,4 +18,3 @@ func _process(delta):
 func _on_pressed():
 	_rotate_thing()
 	pass # Replace with function body.
-

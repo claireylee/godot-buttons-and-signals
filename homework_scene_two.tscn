@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dthenkuvgj8qj"]
 
 [ext_resource type="Texture2D" uid="uid://c5s3a28nqkban" path="res://Art/sonic-transparent.png" id="1_1tjsw"]
-[ext_resource type="Script" path="res://Scripts/CharacterMovement.gd" id="4_t15w6"]
+[ext_resource type="Script" uid="uid://mi4qcejtuuus" path="res://Scripts/CharacterMovement.gd" id="4_t15w6"]
 [ext_resource type="Texture2D" uid="uid://di6ywdo5o23xu" path="res://Art/icon.svg" id="5_oiwv8"]
-[ext_resource type="Script" path="res://Scripts/Scripts Only for Homework Exercises/rotate_for_HW_scene_two.gd" id="8_esh7c"]
+[ext_resource type="Script" uid="uid://bvja822a8x51e" path="res://Scripts/Scripts Only for Homework Exercises/rotate_for_HW_scene_two.gd" id="8_esh7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08uc2"]
 size = Vector2(64, 64)
@@ -62,3 +62,5 @@ theme_override_colors/default_color = Color(0, 0.941176, 0.780392, 1)
 text = "HINT:
 
 To use the correct signal, you'll have to remember what kind of thing Godotbot is..."
+
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

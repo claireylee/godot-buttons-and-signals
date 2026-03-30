@@ -10,6 +10,3 @@ func _disable_collision():
 
 func _enable_collision():
 	$CollisionShape2D.set_deferred("disabled", false)
-
-
-

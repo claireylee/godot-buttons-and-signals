@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @export var movement_speed : float
+@onready var sonic = get_node("../Sonic")
 var force_coefficient = 20
 var apply_gravity : bool
 var gravity = ProjectSettings.get("physics/2d/default_gravity")
@@ -45,3 +46,14 @@ func _physics_process(delta):
 
 		
 
+
+
+func _on_area_2d_body_entered(body: Node2D):
+	if body.name == "Godotbot":
+		sonic._start_rotating()
+	
+
+
+func _on_area_2d_body_exited(body):
+	if body.name == "Godotbot":
+		sonic._stop_rotating()

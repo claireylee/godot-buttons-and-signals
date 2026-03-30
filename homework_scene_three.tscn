@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnargvjvwt8bd"]
 
-[ext_resource type="Script" path="res://Scripts/CharacterMovement.gd" id="1_mpwti"]
+[ext_resource type="Script" uid="uid://mi4qcejtuuus" path="res://Scripts/CharacterMovement.gd" id="1_mpwti"]
 [ext_resource type="Texture2D" uid="uid://di6ywdo5o23xu" path="res://Art/icon.svg" id="2_ekl57"]
 [ext_resource type="Texture2D" uid="uid://c5s3a28nqkban" path="res://Art/sonic-transparent.png" id="3_amwwb"]
-[ext_resource type="Script" path="res://Scripts/Scripts Only for Homework Exercises/rotate_for_HW_scene_three.gd" id="4_0jp2m"]
+[ext_resource type="Script" uid="uid://di6f80et1e6db" path="res://Scripts/Scripts Only for Homework Exercises/rotate_for_HW_scene_three.gd" id="4_0jp2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08uc2"]
 size = Vector2(64, 64)
@@ -64,4 +64,5 @@ text = "HINT:
 To use the correct signal, you'll have to remember what kind of thing Godotbot is..."
 
 [connection signal="body_entered" from="Area2D" to="Sonic-transparent" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Area2D" to="Sonic-transparent" method="_on_area_2d_body_exited"]
